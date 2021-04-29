@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Final</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <button>Add New Instrument</button>
+  <br>
+  <div class="main">
+    
+    <div class="box main" v-for="(data, index) in instruments" v-bind:class="[data.color]">
+      <div>
+        <img height="110" width="200" v-bind:src=data.img></br>
+        {{data.name}}<br>
+
+        <button v-on:click="increaseNumber">Add to Cart</button>
+      </div>
+
+      <div v-bind:class="[{hide:!data.show}]">
+
+      </div>
+    </div>
+  <br>
+    <p id="content">Cart: {{parentNumber}}
+      <button v-on:click="resetNumber">Empty Cart</button>
+    </p>
+  </div>
+
+  <div v-if="showPopUp" v-on:click="showPopUp=false">
+    <div class="popUp">
+      <div v-if="popUpItem.image"><img v-bind:src="popUpItem.image" /></div>
+      <div>{{popUpItem.name}}</div>
+      <div>{{popUpItem.type}}</div>
+      <div>{{popUpItem.price}}</div>
+      <div>{{popUpItem.brand}}</div>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

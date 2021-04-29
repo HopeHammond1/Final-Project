@@ -1,0 +1,32 @@
+.main{
+  float:left;
+  
+}
+.box{
+  height:170px;
+  width:200px;
+  border:solid 2px black;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.red:hover{
+ background-color: red;
+   color: white; 
+}
+
+.blue:hover{
+ background-color: blue;
+   color: white;
+}
+
+.green:hover{
+ background-color: green;
+   color: white;
+}
+
+.hide{
+  display:none;
+}
